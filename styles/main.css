@@ -39,7 +39,10 @@
     height: 100%;
     justify-content: flex-end;
 }
-.top-right>ul>li{
+.top-right > ul>li{
+    display: flex;
+}
+.top-right>ul>li>a{
     color: white;
     margin-right: 15px;
     display: flex;
@@ -49,7 +52,7 @@
     margin-right: 0;
 
 }
-.top-right>ul>li:hover{
+.top-right>ul>li>a:hover{
     color: rgb(11, 232, 129);
     cursor: pointer;
 }
@@ -60,6 +63,39 @@
     width: 100%;
     height: 70px;
     background-color: rgba(236, 240, 241,0.5);
+    display: flex;
+}
+.nav-left{
+    width: 250px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.nav-left > img{
+    height: 60px;
+}
+.nav-right{
+    flex: 1;
+}
+.nav-right > ul{
+    height: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: right;
+}
+.nav-right > ul >li{
+    margin: 10px;
+    padding: 0 20px;
+    color: black;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    font-weight: 600;
+}
+.nav-right > ul >li:last-child{
+    margin-right: 100px;
 }
 /* nav bar end */
 /* main slider start */
@@ -104,7 +140,14 @@
     background-color: rgb(44, 62, 80,1.0);
     box-shadow:10px 10px 10px rgb(29, 41, 53);
     color: white;
-   
+}
+.inner-text{
+    color: white;
+    font-weight: bold;
+}
+.inner-para{
+    color: white;
+    font-style: italic;
 }
 .inner-warap-element{
     flex: 1;
@@ -141,7 +184,7 @@
     color: rgba(11, 232, 129,1.0);
 }
 /* solutions end */
-bg-outer{
+.bg-outer{
     width: 100%;
     height:300px;
     background-image:url("../images/bg.jpg");
@@ -152,18 +195,19 @@ bg-outer{
 .team-item-outer{
     width: 260px;
     height: 400px;
-    background-image: url("../images/argent.jpg");
+    /*background-image: url("../images/nan2.jpg");*/
     background-position: center;
     background-size: cover;
     overflow: hidden;
     position: relative;
 }
+
 .element{
     width: 100%;
     height: 200px;
     background-color: rgba(11, 232, 129,0.5);
     position: absolute;
-    transition: all 1s linear;
+    transition: all 0.5s linear;
 }
 .top-element{
     top: -200px;
@@ -178,7 +222,57 @@ bg-outer{
 .team-item-outer:hover .bottom-element{
     bottom: 0;
 }
+.data-wrapper{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+.team-item-outer:hover .data-wrapper{
+    display: flex;
+}
+.name{
+    color: white;
+    font-size: 25px;
+    font-weight: 600;
+    text-align: center;
+}
+.designation{
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+}
+.social-icon-wrapper{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.social-icon-wrapper>ul{
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 
+}
+.social-icon-wrapper>ul>li{
+    margin-right: 15px;
+    color: white;
+}
+.social-icon-wrapper>ul>li:last-child{
+    margin-right: 0;
+}
+
+.container-two{
+    display: flex;
+    margin-right: 100px;
+    margin-left: 100px;
+}
 
 @media(max-width:1000px){
     .top-outer{
