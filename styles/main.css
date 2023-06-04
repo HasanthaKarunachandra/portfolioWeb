@@ -32,6 +32,9 @@
 }
 .top-left > ul > li  span:hover{
     cursor: pointer;
+    /*color: rgb(12, 44, 238);*/
+    text-decoration: underline;
+    scale: 0.9;
 }
 .top-right > ul{
     list-style: none;
@@ -47,14 +50,15 @@
     margin-right: 15px;
     display: flex;
     align-items: center;
+    text-decoration: none;
 }
 .top-right > ul > li:last-child{
     margin-right: 0;
-
 }
 .top-right>ul>li>a:hover{
     color: rgb(11, 232, 129);
     cursor: pointer;
+    scale: 1.5;
 }
 /*Top bar end*/
 
@@ -75,6 +79,9 @@
 .nav-left > img{
     height: 60px;
 }
+.nav-left > img:hover{
+    scale: 0.9;
+}
 .nav-right{
     flex: 1;
 }
@@ -87,18 +94,103 @@
 .nav-right > ul >li{
     margin: 10px;
     padding: 0 20px;
-    color: black;
-    cursor: pointer;
+    color: white;
     display: flex;
     align-items: center;
     font-size: 15px;
     font-weight: 600;
 }
 .nav-right > ul >li:last-child{
-    margin-right: 100px;
+    margin-right: 70px;
 }
+.nav-right > ul >li:hover{
+    cursor: pointer;
+    color: rgb(11, 232, 129);
+    scale: 0.9;
+}
+.bars{
+    color: white;
+    align-items: center;
+    margin-right: 20px;
+    font-size: 20px;
+    justify-content: left;
+    position: relative;
+    display: none;
+}
+.drop-Down>ul{
+    width: 100px;
+    height: auto;
+    display: none;
+    list-style: none;
+    border: 1px solid red;
+    z-index: 10;
+    position: absolute;
+    top: 40px;
+    left: -100px;
+    background-color: rgba(236, 240, 241,0.5);
+    border-radius: 5px;
+}
+.drop-Down>ul>li{
+    margin-bottom:5px;
+    text-align: right;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+}
+.drop-Down > ul >li:hover{
+    cursor: pointer;
+    color: rgb(11, 232, 129);
+}
+.bars:hover{
+    color: rgb(11, 232, 129);
+}
+.bars:active .drop-Down>ul{
+    display: block;
+}
+
 /* nav bar end */
 /* main slider start */
+.display-card{
+    width: 300px;
+    height: 150px;
+    margin-bottom: 0;
+    position: relative;
+    display: flex;
+    z-index: 10;
+    top:400px;
+    left: 50px;
+    background-color: rgba(255, 255, 255,0.3);
+    border-radius: 25px;
+}
+.display-card>h4{
+    font-weight:bold;
+    color: white;
+    margin-top: 20px;
+    text-align: center;
+}
+.display-card>p>a{
+    position: absolute;
+    background-color: rgba(255, 255, 255,0.5);
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 100px;
+    display: flex;
+    top: 90px;
+    right: 75px;
+    font-weight: 600;
+    padding: 10px;
+    letter-spacing: 0.1em;
+    transition: 0.5s;
+
+}
+
+.display-card>p>a:hover{
+    letter-spacing: 0.25em;
+    cursor: pointer;
+    color: white;
+}
+
 .slider{
     width: 100%;
     height: 100vh;
@@ -129,7 +221,7 @@
     width: 100%;
     height: 280px;
     padding-top: 20px;
-    padding-bottom: 20px;
+    padding-bottom: 25px;
 }
 /* solutions start */
 .inner{
@@ -166,8 +258,8 @@
     font-size: 50px;
 }
 .movable-element{
-    width: 40px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
     border: 2px solid rgba(11, 232, 129,1.0);
     border-radius: 100%;
     display: flex;
@@ -195,7 +287,6 @@
 .team-item-outer{
     width: 260px;
     height: 400px;
-    /*background-image: url("../images/nan2.jpg");*/
     background-position: center;
     background-size: cover;
     overflow: hidden;
@@ -245,6 +336,7 @@
     color: white;
     font-size: 18px;
     font-weight: 500;
+    text-align: center;
 }
 .social-icon-wrapper{
     width: 100%;
@@ -278,4 +370,17 @@
     .top-outer{
         display:flex;
     }
+    .nav-right>ul{
+        display: none;
+    }
+    .data-wrapper{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .bars{
+        display: flex;
+
+    }
+
 }
